@@ -11,6 +11,8 @@
 	  PRIMARY KEY (`id`)
 	) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
+	# se crean datos de ejemplo.
+
 	-- Volcando datos para la tabla pos.temp_habitaciones: ~5 rows (aproximadamente)
 	/*!40000 ALTER TABLE `temp_habitaciones` DISABLE KEYS */;
 	INSERT INTO `temp_habitaciones` (`id`, `nombre`, `temp`, `hum`, `tvo`) VALUES
