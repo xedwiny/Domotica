@@ -89,4 +89,34 @@
         
         }
 
+      static public function mdlEditarTemperatura($tabla, $datos){
+
+          $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre,  temp = :temp, hum = :hum, tvo = :tvo WHERE id = :id");
+
+          $stmt -> bindparam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+
+          $stmt -> bindparam(":temp", $datos["temp"], PDO::PARAM_STR);
+
+          $stmt -> bindparam(":hum", $datos["hum"], PDO::PARAM_STR);
+
+          $stmt -> bindparam(":tvo", $datos["tvo"], PDO::PARAM_STR);
+
+          $stmt -> bindparam(":id", $datos["id"], PDO::PARAM_STR);
+
+          if($stmt -> execute()){
+
+              return "ok";
+
+          }else{
+
+              return "error";
+
+          }
+
+          $stmt -> close();
+
+          $stmt = null;
+
+        }
+
 	}

@@ -36,4 +36,36 @@ $("input[data-bootstrap-switch]").each(function(){
   $(this).bootstrapSwitch('state', $(this).prop('checked'));
 });
 
+$(document).on("click", ".btnEditarTemperatura", function () {
+
+    var idTemperatura = $(this).attr("idTemperatura");
+
+    document.getElementById('idActual').value=idTemperatura;
+
+    console.log("el id es: " + idTemperatura);
+
+    var datos = new FormData();
+
+    datos.append("idTemperatura", idTemperatura);
+
+    $.ajax({
+
+        url: 'ajax/temperatura.ajax.php',
+        method: 'POST',
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: 'json',
+        success: function (respuesta) {
+
+          $("#editarCuarto").val(respuesta["nombre"]);
+          $("#editarTemp").val(respuesta["temp"]);
+          $("#editarHum").val(respuesta["hum"]);
+          $("#editarTvo").val(respuesta["tvo"]);
+
+        }
+
+    });
+});
 

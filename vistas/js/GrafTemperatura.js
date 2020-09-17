@@ -1,5 +1,5 @@
 // Grafico de Temperatura
-var ctxT = document.getElementById('GrafTemp',).getContext('2d');
+var ctxT = document.getElementById('GrafTemp').getContext('2d');
 var chart = new Chart(ctxT, {
     // The type of chart we want to create
     type: 'line',

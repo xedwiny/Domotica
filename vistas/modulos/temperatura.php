@@ -35,6 +35,7 @@
       <table class="table table-bordered table-striped table-hover table-dark tablas">        
         <thead class="thead-dark">          
           <tr>
+            <th>id</th>
             <th>Habitacion</th>
             <th>Temp</th>
             <th>Hum</th>
@@ -57,8 +58,12 @@
 
             '<tr>
 
+              <td class="align-middle text-center">
+                <h3>'.$value["id"].'</h1> 
+              </td>
+
               <!-- NOMBRE -->
-              <td class="align-middle">
+              <td class="align-middle text-center">
                 <h3>'.$value["nombre"].'</h1> 
               </td>
 
@@ -99,7 +104,7 @@
                 <div class="btn-group btn-block">
                   <button class="btn btn-info btnPermiso" data-toggle="modal" data-target="#permisos"><i class="fas fa-users-cog"></i></button>
 
-                  <button class="btn btn-warning btnEditar" data-toggle="modal" data-target="#editar"><i class="fas fa-bell"></i></button>
+                  <button class="btn btn-warning btnEditarTemperatura" idTemperatura="'.$value["id"].'" data-toggle="modal" data-target="#editar"><i class="fas fa-bell"></i></button>
 
                   <button class="btn btn-danger btnEliminar" idCuarto="'.$value["id"].'""><i class="fas fa-times"></i></button>
                 </div>
@@ -120,73 +125,130 @@
 <div class="modal fade" id="editar">
   <div class="modal-dialog">
     <div class="modal-content" style="background: #343a40; color:#fff;">
-      <div class="modal-header">
-        <h4 class="modal-title">Editar</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" style="background: #424242; color:#fff;">
-        <!-- Mmodifikar nombre -->
-        <div class="form-group">
-          <label>Nombre</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Habitacion 1">
+      <form role="form" method="post" enctype="multipart/form-data">
+        <div class="modal-header">
+          <h4 class="modal-title">Editar</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <!-- Editar temperatura Noti -->
-        <div class="form-group">
-          <!-- Switch -->
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1">Notificar</label>
-          </div>
-          <!-- SLIDER -->
-          <div class="slider-blue">
-            <label for="exampleInputEmail1">Temperatura: </label>            
-            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
-            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-            data-slider-selection="before" data-slider-tooltip="show">
-          </div>
-        </div>
-        <!-- Editar Humedad Noti -->
-        <div class="form-group">
-          <!-- Switch -->
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch2">
-            <label class="custom-control-label" for="customSwitch2">Notificar</label>
-          </div>
-          <!-- SLIDER -->
-          <div class="slider-blue">
-            <label for="exampleInputEmail1">Humedad: </label>            
-            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
-            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-            data-slider-selection="before" data-slider-tooltip="show">
-          </div>
-        </div>
-        <!-- TVO Humedad Noti -->
-        <div class="form-group">
-          <!-- Switch -->
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch3">
-            <label class="custom-control-label" for="customSwitch3">Notificar</label>
-          </div>
-          <!-- SLIDER -->
-          <div class="slider-blue">
-            <label for="exampleInputEmail1">TVOC: </label>            
-            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
-            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-            data-slider-selection="before" data-slider-tooltip="show">
-          </div>
-        </div>       
+        <div class="modal-body" style="background: #424242; color:#fff;">
+          <div class="box-body">
 
-        <div class="form-check">
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <div class="input-group-prepend">
+
+                  <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+
+                </div>
+
+                <input type="text" class="form-control input-lg" name="idActual" id="idActual" required readonly>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- Mmodifikar nombre -->
+          <div class="box-body">
+
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <div class="input-group-prepend">
+
+                  <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+
+                </div>
+
+                <input type="text" class="form-control input-lg" name="editarCuarto" id="editarCuarto"  required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="box-body">
+            <h6>Ingrese la temperatura actual</h6>
+            <div class="form-group">
+              
+              <div class="input-group">
+
+                <div class="input-group-prepend">
+
+                  <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+
+                </div>
+
+                <input type="text" class="form-control input-lg" name="editarTemp" id="editarTemp"  required>
+
+              </div>
+
+            </div>
+          </div><br>
+
+          <div class="box-body">
+            <h6>Ingrese la humedad actual</h6>
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <div class="input-group-prepend">
+
+                  <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+
+                </div>
+
+                <input type="text" class="form-control input-lg" name="editarHum" id="editarHum"  required>
+
+              </div>
+
+            </div>
+          </div><br>
+
+          <div class="box-body">
+            <h6>Ingrese el porcentaje de gases actual</h6>
+            <div class="form-group">
+              
+              <div class="input-group">
+
+                <div class="input-group-prepend">
+
+                  <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+
+                </div>
+
+                <input type="text" class="form-control input-lg" name="editarTvo" id="editarTvo"  required>
+
+              </div>
+
+            </div>
+          </div>
 
         </div>
-      </div>
 
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
+        <div class="modal-footer" style="background: #343a40; color:#fff;">
+
+            <button type="submit" class="btn btn-dark">guardar</button>
+
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+        </div>
+
+        <?php
+
+            $registro = new temperaturaControlador();
+
+            $registro->ctrEditarTemperatura();
+
+          ?>
+
+      </form>
     </div>
     <!-- /.modal-content -->
   </div>
@@ -229,9 +291,9 @@
           </div>
 
           <div class="box-body">
-
+            <h6>Ingrese la temperatura actual</h6>
             <div class="form-group">
-
+              
               <div class="input-group">
 
                 <div class="input-group-prepend">
@@ -240,17 +302,16 @@
 
                 </div>
 
-                <input type="text" class="form-control input-lg" name="nuevaTemp"
-                placeholder="Ingresar la temperatura" required>
+                <input type="text" class="form-control input-lg" name="temp"
+                placeholder="Ingresar Nombre" required>
 
               </div>
 
             </div>
-
-          </div>
+          </div><br>
 
           <div class="box-body">
-
+            <h6>Ingrese la humedad actual</h6>
             <div class="form-group">
 
               <div class="input-group">
@@ -261,19 +322,18 @@
 
                 </div>
 
-                <input type="text" class="form-control input-lg" name="nuevaHum"
-                placeholder="Ingresar la humnedad" required>
+                <input type="text" class="form-control input-lg" name="hum"
+                placeholder="Ingresar Nombre" required>
 
               </div>
 
             </div>
-
-          </div>
+          </div><br>
 
           <div class="box-body">
-
+            <h6>Ingrese el porcentaje de gases actual</h6>
             <div class="form-group">
-
+              
               <div class="input-group">
 
                 <div class="input-group-prepend">
@@ -282,14 +342,14 @@
 
                 </div>
 
-                <input type="text" class="form-control input-lg" name="nuevoTvo"
-                placeholder="Ingresar TVO" required>
+                <input type="text" class="form-control input-lg" name="tvo"
+                placeholder="Ingresar Nombre" required>
 
               </div>
 
             </div>
-
           </div>
+
         </div>
 
         <div class="modal-footer" style="background: #343a40; color:#fff;">
