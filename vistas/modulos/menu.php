@@ -194,6 +194,22 @@
             </a>
             
           </li>
+
+          <li class="nav-item has-treeview">
+
+            <a href="ModuloReportes" class="nav-link">
+
+              <i class="nav-icon fas fa-lightbulb"></i>
+
+              <p>
+
+                Modulo Reportes
+
+              </p>
+
+            </a>
+            
+          </li>
         
         </ul>
 

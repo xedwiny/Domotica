@@ -100,7 +100,8 @@ if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
                 $_GET["vista"] == "puertas"||
                 $_GET["vista"] == "ventanas"||
                 $_GET["vista"] == "salir"||
-                $_GET["vista"] == "iluminacion") {
+                $_GET["vista"] == "iluminacion" ||
+                $_GET["vista"] == "ModuloReportes") {
               
               include 'vistas/modulos/'.$_GET["vista"].'.php';
 
