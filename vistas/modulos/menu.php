@@ -141,7 +141,7 @@
           ============================================= -->
           <li class="nav-item has-treeview">
 
-            <a href="puertas" class="nav-link">
+            <a href="puerta" class="nav-link">
 
               <i class="nav-icon fas fa-door-closed"></i>
 

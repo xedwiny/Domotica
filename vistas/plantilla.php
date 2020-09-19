@@ -41,6 +41,25 @@
   <!-- Booststrap -->
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
 
+    <!-- =============================================================
+                PLUGINS de puertas
+  ============================================================= -->
+
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="vistas/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="vistas/plugins/daterangepicker/daterangepicker.css">
+  
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="vistas/plugins/daterangepicker/daterangepicker.css">
+
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="vistas/plugins/morris.js/morris.css">
+
 
   <!-- =============================================================
           JS
@@ -75,6 +94,51 @@
   <!-- Bootstrap toggle-->
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+ <!-- =============================================================
+         script puertas
+  ============================================================= -->
+  
+  <!-- Plugin para Internet Explorer 11 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+  <!-- Sparkline -->
+  <script src="vistas/plugins/sparklines/sparkline.js"></script>
+
+  <!-- jQuery UI  -->
+  <script src="vistas/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+  <!-- AdminLTE for demo purposes  -->
+  <script src="vistas/dist/js/demo.js"></script>
+
+
+
+  <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized  -->
+  <script src="vistas/plugins/flot-old/jquery.flot.resize.min.js"></script>
+
+  <!-- FLOT PIE PLUGIN - also used to draw donut charts  -->
+  <script src="vistas/plugins/flot-old/jquery.flot.pie.min.js"></script>
+
+
+  <!-- bootstrap color picker -->
+  <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+  
+  
+
+  <!-- Morris.js charts http://morrisjs.github.io/morris.js/-->
+  <script src="vistas/plugins/raphael/raphael.min.js"></script>
+  <script src="vistas/plugins/morris.js/morris.min.js"></script>
+
+  <!-- ChartJS http://www.chartjs.org/-->
+  <script src="vistas/plugins/Chart.js/Chart.js"></script>
+
+  <!-- InputMask -->
+  <script src="vistas/plugins/moment/moment.min.js"></script>
+  <script src="vistas/plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+
+
+  <!-- date-range-picker -->
+  <script src="vistas/plugins/daterangepicker/daterangepicker.js"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -107,11 +171,12 @@
                   $_GET["vista"] == "usuarios"||
                   $_GET["vista"] == "serviciosPublicos"||
                   $_GET["vista"] == "temperatura"||
-                  $_GET["vista"] == "puertas"||
+                  $_GET["vista"] == "puerta"||
                   $_GET["vista"] == "ventanas"||
                   $_GET["vista"] == "salir"||
                   $_GET["vista"] == "iluminacion" ||
-                  $_GET["vista"] == "tempHabitacion") {
+                  $_GET["vista"] == "tempHabitacion" ||
+                  $_GET["vista"] == "ModuloReportes")  {
 
                 include 'vistas/modulos/'.$_GET["vista"].'.php';
 
