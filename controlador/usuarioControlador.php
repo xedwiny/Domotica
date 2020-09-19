@@ -414,26 +414,26 @@
 
 				            if($respuesta == "ok"){
 
-					                        echo "<script>
-					                                      Swal.fire({
+		                        echo "<script>
+		                                      Swal.fire({
 
-					                                          type: 'success',
-					                                          title: '¡El usuario se ingreso correctamente!',
-					                                          background: '#343a40',
-					                                          showConfirmButton: true,
-					                                          confirmButtonColor: '#28a745',
-					                                          confirmButtonText: 'Ok',
-					                                          closeOnConfirm: false 
+		                                          type: 'success',
+		                                          title: '¡El usuario se ingreso correctamente!',
+		                                          background: '#343a40',
+		                                          showConfirmButton: true,
+		                                          confirmButtonColor: '#28a745',
+		                                          confirmButtonText: 'Ok',
+		                                          closeOnConfirm: false 
 
-					                                          }).then((result)=>{
+		                                          }).then((result)=>{
 
-					                                            if(result.value){
+		                                            if(result.value){
 
-					                                              window.location = 'usuarios';
-					                                            }      
-					                                        });
+		                                              window.location = 'usuarios';
+		                                            }      
+		                                        });
 
-					                              </script>";
+		                              </script>";
 
 							} 
 
