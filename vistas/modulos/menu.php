@@ -199,7 +199,7 @@
 
             <a href="ModuloReportes" class="nav-link">
 
-              <i class="nav-icon fas fa-lightbulb"></i>
+             <i class="nav-icon fas fa-check-double"></i>
 
               <p>
 

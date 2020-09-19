@@ -45,11 +45,11 @@
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header bg-success">
                 <div class="widget-user-image">
-                  <img class="img-circle elevation-2" src="images/icons/edwin.jpg" alt="User Avatar">
+                  <img class="img-circle elevation-2" src="images/icons/puerta.png" alt="User Avatar">
                 </div>
                 <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Reportes puertas</h3>
-                <h5 class="widget-user-desc">infomacion General de puertas</h5>
+                <h3 class="widget-user-username">Reportes , infomacion</h3>
+                <h5 class="widget-user-desc"> General de puertas</h5>
               </div>
               <div class="card-footer p-0" style="background-color: #343a40; ">
                 <ul class="nav flex-column">
@@ -86,11 +86,11 @@
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header bg-success">
                 <div class="widget-user-image">
-                  <img class="img-circle elevation-2" src="images/icons/ventana.jpg" alt="User Avatar">
+                  <img class="img-circle elevation-2" src="images/icons/ventanas.jpg" alt="User Avatar">
                 </div>
                 <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Reportes puertas</h3>
-                <h5 class="widget-user-desc">infomacion General de puertas</h5>
+                <h3 class="widget-user-username">Reportes, infomacion </h3>
+                <h5 class="widget-user-desc"> General de ventanas</h5>
               </div>
               <div class="card-footer p-0" style="background-color: #343a40; ">
                 <ul class="nav flex-column">
@@ -130,8 +130,8 @@
                   <img class="img-circle elevation-2" src="images/icons/temperatura.jpg" alt="User Avatar">
                 </div>
                 <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Reportes Temperatura</h3>
-                <h5 class="widget-user-desc">infomacion General de Temperatura</h5>
+                <h3 class="widget-user-username">Reportes , infomacion</h3>
+                <h5 class="widget-user-desc"> General de Temperatura</h5>
               </div>
               <div class="card-footer p-0" style="background-color: #343a40; ">
                 <ul class="nav flex-column">
@@ -171,8 +171,8 @@
                   <img class="img-circle elevation-2" src="images/icons/servicios.jpg" alt="User Avatar">
                 </div>
                 <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Reportes Servicios</h3>
-                <h5 class="widget-user-desc">infomacion General de Servicios </h5>
+                <h3 class="widget-user-username">Reportes , infomacion</h3>
+                <h5 class="widget-user-desc"> General de Servicios </h5>
               </div>
               <div class="card-footer p-0" style="background-color: #343a40; ">
                 <ul class="nav flex-column">
@@ -212,8 +212,8 @@
                   <img class="img-circle elevation-2" src="images/icons/iluminacion.jpg" alt="User Avatar">
                 </div>
                 <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Reportes Iluminacion</h3>
-                <h5 class="widget-user-desc">infomacion General de Iluminacion</h5>
+                <h3 class="widget-user-username">Reportes , infomacion</h3>
+                <h5 class="widget-user-desc"> General de Iluminacion</h5>
               </div>
               <div class="card-footer p-0" style="background-color: #343a40; ">
                 <ul class="nav flex-column">
