@@ -136,7 +136,7 @@
               <div class="card-footer p-0" style="background-color: #343a40; ">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link"  data-toggle="modal" data-target="#modalHistorialTemperatura" >
                       Sensores de Temperatura registradoss<span class="float-right badge bg-primary">31</span>
                     </a>
                   </li>
@@ -432,6 +432,121 @@
                         </dl>
 
                       </div>
+                      <!-- /.card-body -->
+
+                    </div>
+                    <!-- /.card -->
+
+                  </div>
+
+                </div>
+
+              </div>
+
+          <!--================================
+              FOOTER DEL MODAL
+              =================================-->
+
+              <div class="modal-footer justify-content-between">
+
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+
+              </div>
+
+            </form>
+
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+    <!--================================
+    MODAL temperatura
+    =================================-->
+
+    <div class="modal fade" id="modalHistorialTemperatura">
+
+      <div class="modal-dialog">
+
+        <div class="modal-content" style="background: #6c757d; color:#fff;">
+
+          <form role="form" method="post" enctype="multipart/form-data">
+
+          <!--================================
+              CABEZA DEL MODAL
+              =================================-->
+
+              <div class="modal-header"  style="background: #343a40; color: #fff">
+
+                <h4 class="modal-title">Historial de la temperatura</h4>
+
+                <button type="button" style="color:red;" class="close" data-dismiss="modal" aria-label="Close">
+
+                  <span aria-hidden="true">&times;</span>
+
+                </button>
+
+              </div>
+
+            <!--================================
+              CUERPO DEL MODAL
+              =================================-->
+
+              <div class="modal-body">
+
+                <div class="box-body">
+
+                   <!-- grafiko Humedad -->
+                   <div class="col-8">
+              <div class="card card-primary">
+                <div class="card-header" style="background:#343a40;">
+                  <h3 class="card-title">Historial</h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>                      
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-container" style="position: relative;">
+                    <canvas id="GrafHum" class="chartjs-render-monitor"></canvas>
+                  </div>
+                </div>
+              </div>
+                   </div>
+                  </div>
+
+                  <div class="col-md-12">               
+                    <div class="col-md-8">
+                      <div class="card card-primary">
+                       <div class="card-header" style="background:#343a40;">
+                      <h3 class="card-title">Historial</h3>
+                      <div class="card-tools">
+                       <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                      </button>
+                     <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>                      
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                  </div>
+                   </div>
+                   <div class="card-body">
+
+                      <div class="chart-container" style="position: relative;">
+                     <canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
+                       </div>
+                  
+                  </div>
+                    </div>
+                    </div>
+
+
+                  </div>
                       <!-- /.card-body -->
 
                     </div>
