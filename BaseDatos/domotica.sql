@@ -4,7 +4,6 @@
 -- SO del servidor:              Win64
 -- HeidiSQL Versión:             11.0.0.5919
 -- --------------------------------------------------------
-usuarios
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
@@ -15,6 +14,22 @@ usuarios
 -- Volcando estructura de base de datos para pos
 CREATE DATABASE IF NOT EXISTS `domotica` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci */;
 USE `domotica`;
+
+CREATE TABLE IF NOT EXISTS `temp_habitaciones` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `nombre` varchar(50) DEFAULT NULL,
+	  `temp` varchar(50) DEFAULT NULL,
+	  `hum` varchar(50) DEFAULT NULL,
+	  `tvo` varchar(50) DEFAULT NULL,
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+	
+	INSERT INTO `temp_habitaciones` (`id`, `nombre`, `temp`, `hum`, `tvo`) VALUES
+	  (1, 'Fabian', '20c°', '15', '12'),
+	  (2, 'Chile', '25c°', '16', '8'),
+	  (3, 'German', '55c°', '66', '10'),
+	  (5, 'oscar', '25c°', '25%', '25%');
+	
 
 -- Volcando estructura para tabla pos.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
