@@ -41,29 +41,12 @@
   <!-- Booststrap -->
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
 
-    <!-- =============================================================
-                PLUGINS de puertas
-  ============================================================= -->
-
-  <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="vistas/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-
-  <!-- daterange picker -->
-  <link rel="stylesheet" href="vistas/plugins/daterangepicker/daterangepicker.css">
-  
-  <!-- Bootstrap Color Picker -->
-  <link rel="stylesheet" href="vistas/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-  
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="vistas/plugins/daterangepicker/daterangepicker.css">
-
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="vistas/plugins/morris.js/morris.css">
 
 
   <!-- =============================================================
           JS
   ============================================================= -->
+  
   <!-- jQuery -->
   <script src="vistas/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
@@ -83,8 +66,6 @@
   <script src="vistas/plugins/flot/jquery.flot.js"></script>
   <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
   <script src="vistas/plugins/flot-old/jquery.flot.resize.min.js"></script>
-  <!-- jQuery Knob -->
-  <script src="vistas/plugins/jquery-knob/jquery.knob.min.js"></script>
   <!-- chart -->
   <script src="vistas/plugins/chart.js/Chart.min.js"></script>
   <!-- Bootstrap slider -->
@@ -93,23 +74,6 @@
   <script src="vistas/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
   <!-- Bootstrap toggle-->
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
-
- <!-- =============================================================
-         script puertas
-  ============================================================= -->
-  
-  <!-- Plugin para Internet Explorer 11 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
-
-  <!-- Sparkline -->
-  <script src="vistas/plugins/sparklines/sparkline.js"></script>
-
-  <!-- jQuery UI  -->
-  <script src="vistas/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-  <!-- AdminLTE for demo purposes  -->
-  <script src="vistas/dist/js/demo.js"></script>
-
 
 
   <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized  -->
@@ -123,10 +87,6 @@
   <script src="vistas/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
   
   
-
-  <!-- Morris.js charts http://morrisjs.github.io/morris.js/-->
-  <script src="vistas/plugins/raphael/raphael.min.js"></script>
-  <script src="vistas/plugins/morris.js/morris.min.js"></script>
 
   <!-- ChartJS http://www.chartjs.org/-->
   <script src="vistas/plugins/Chart.js/Chart.js"></script>
@@ -169,13 +129,7 @@
 
               if ($_GET["vista"] == "inicio"||
                   $_GET["vista"] == "usuarios"||
-                  $_GET["vista"] == "serviciosPublicos"||
-                  $_GET["vista"] == "temperatura"||
-                  $_GET["vista"] == "puerta"||
-                  $_GET["vista"] == "ventanas"||
-                  $_GET["vista"] == "salir"||
-                  $_GET["vista"] == "iluminacion" ||
-                  $_GET["vista"] == "tempHabitacion" ||
+                  $_GET["vista"] == "salir" ||
                   $_GET["vista"] == "ModuloReportes")  {
 
                 include 'vistas/modulos/'.$_GET["vista"].'.php';
@@ -212,13 +166,9 @@
 <script src="./vistas/js/plantilla.js"></script>
 <script src="./vistas/js/usuario.js"></script>
 <script src="vistas/js/temperatura.js"></script>
-<script src="vistas/js/knob.js"></script>
 <script src="vistas/js/boostrapSlider.js"></script>
 
 
-<script src="vistas/js/GrafTemperatura.js"></script>
-<script src="vistas/js/GrafHum.js"></script>
-<script src="vistas/js/GrafTvo.js"></script>
 
 
 

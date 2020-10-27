@@ -42,7 +42,7 @@
           <!-- Widget: user widget style 2 -->
           <div class="card card-widget  widget-user-2" >
           <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-success">
+            <div class="widget-user-header bg-olive">
               <div class="widget-user-image">
                 <img class="img-circle elevation-2" src="images/icons/puerta.png" alt="User Avatar">
               </div>
@@ -53,22 +53,22 @@
             <div class="card-footer p-0" style="background-color: #343a40; ">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a href="#" class="nav-link" data-toggle="modal" data-target="#modalPuertasRegistradas" >
+                  <a href="#" class="nav-link" data-toggle="modal" data-target="#modalPuertasRegistradas" style="color:#FFFFE0"; >
                       puertas registradas<span class="float-right badge bg-primary">31</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link" data-toggle="modal" data-target="#modalPuertasEnMalEstado">
+                  <a href="#" class="nav-link" data-toggle="modal" data-target="#modalPuertasEnMalEstado" style="color:#FFFFE0">
                       Puertas en mal estado<span class="float-right badge bg-info">5</span>
                   </a>
                 </li>
-                <li class="nav-item" data-toggle="modal" data-target="#modalPuertasVigiladas">
-                  <a href="#" class="nav-link">
+                <li class="nav-item" data-toggle="modal" data-target="#modalPuertasVigiladas" >
+                  <a href="#" class="nav-link" style="color:#FFFFE0">
                       Puertas Vigiladas  <span class="float-right badge bg-success">12</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link" data-toggle="modal" data-target="#modalHistorialPuerta">
+                  <a href="#" class="nav-link" data-toggle="modal" data-target="#modalHistorialPuerta" style="color:#FFFFE0">
                      Registro de Accesos <span class="float-right badge bg-danger">842</span>
                   </a>
                 </li>
@@ -82,7 +82,7 @@
           <!-- Widget: user widget style 2 -->
           <div class="card card-widget  widget-user-2" >
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-success">
+            <div class="widget-user-header bg-teal">
               <div class="widget-user-image">
                 <img class="img-circle elevation-2" src="images/icons/ventanas.jpg" alt="User Avatar">
               </div>
@@ -122,7 +122,7 @@
           <!-- Widget: user widget style 2 -->
           <div class="card card-widget  widget-user-2" >
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-success">
+            <div class="widget-user-header bg-danger">
               <div class="widget-user-image">
                 <img class="img-circle elevation-2" src="images/icons/temperatura.jpg" alt="User Avatar">
               </div>
@@ -162,7 +162,7 @@
           <!-- Widget: user widget style 2 -->
           <div class="card card-widget  widget-user-2" >
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-success">
+            <div class="widget-user-header bg-primary">
               <div class="widget-user-image">
                 <img class="img-circle elevation-2" src="images/icons/servicios.jpg" alt="User Avatar">
               </div>
@@ -197,12 +197,12 @@
           </div>  
         </div>
 
-          <!-- QUINTA TARJETA PUERTAS -->
+          <!-- QUINTA TARJETA ILUMINACION -->
         <div class="col-md-4">
           <!-- Widget: user widget style 2 -->
           <div class="card card-widget  widget-user-2" >
             <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-success">
+            <div class="widget-user-header bg-warning">
               <div class="widget-user-image">
                 <img class="img-circle elevation-2" src="images/icons/iluminacion.jpg" alt="User Avatar">
               </div>
@@ -252,12 +252,12 @@
  <!-- Puertas registradas-->
 <div class="modal fade" id="modalPuertasRegistradas">
   <div class="modal-dialog">
-    <div class="modal-content" style="background: #6c757d; color:#fff;">
+    <div class="modal-content" >
       <form role="form" method="post" enctype="multipart/form-data">
         <!--================================
           CABEZA DEL MODAL
         =================================-->
-        <div class="modal-header"  style="background: #343a40; color: #fff">
+        <div class="modal-header" >
           <h4 class="modal-title">Puertas Registradas</h4>
           <button type="button" style="color:red;" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
