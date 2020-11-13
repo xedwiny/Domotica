@@ -166,7 +166,7 @@
                 </li>
                 
                 <li class="nav-item bg-danger">
-                  <a href="#" class="nav-link"  style="color:#FFFFE0">
+                  <a href="#" class="nav-link"  style="color:#FFFFE0" data-toggle="modal" data-target="#modaltempe">
                     Ver Grafica Temperatura <span class="float-right badge bg-danger"><i class="nav-icon fas fa-check-double"></i></span>
                     
                   </a>
@@ -260,8 +260,8 @@
                 </li>
 
                 <li class="nav-item bg-warning">
-                  <a href="#" class="nav-link"  style="color:#FFFFE0">
-                    Ver Grafica Temperatura <span class="float-right badge bg-warning"><i class="nav-icon fas fa-check-double"></i></span>
+                  <a href="#" class="nav-link"  style="color:#FFFFE0" data-toggle="modal" data-target="#modalIlumi">
+                    Ver Grafica Iluminacion <span class="float-right badge bg-warning"><i class="nav-icon fas fa-check-double"></i></span>
                     
                   </a>
                 </li>
@@ -279,10 +279,10 @@
 
   
 <!--================================
-  MODALES DE TEMPERATURA
+  MODALES DE Iluminacion
 =================================-->
 <!--Mas Informacion-->
-<div class="modal fade" id="Informacion">
+<div class="modal fade" id="modalIlumi">
   <div class="modal-dialog">
     <div class="modal-content" style="background: #6c757d; color:#fff;">
       <form role="form" method="post" enctype="multipart/form-data">
@@ -309,6 +309,58 @@
                 <div class="card-body">
                   <div class="chart-container" style="position: relative;">
                     <canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!--================================
+          FOOTER DEL MODAL
+         ================================-->
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ver grafica</button>
+        </div>
+
+      </form>
+    </div>
+  </div>        
+</div>
+
+<!--================================
+  MODALES DE TEMPERATURA
+=================================-->
+<!--Mas Informacion-->
+<div class="modal fade" id="modaltempe">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background: #6c757d; color:#fff;">
+      <form role="form" method="post" enctype="multipart/form-data">
+
+        <!--================================
+          CABEZA DEL MODAL
+        =================================-->
+        <div class="modal-header"  style="background: #343a40; color: #fff">
+          <h4 class="modal-title">Informacion</h4>
+          <button type="button" style="color:red;" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!--================================
+          CUERPO DEL MODAL
+        =================================-->
+        <div class="modal-body">
+          <div class="col-md-12">               
+            <div class="col-md-12">
+              <div class="card card-primary">
+                <div class="card-header" style="background:#343a40;">
+                  <h3 class="card-title">Temperatura</h3>
+                <div class="card-body">
+                  <div class="chart-container" style="position: relative;">
+                  <!--<canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
+                  -->
                   </div>  
                 </div>
               </div>

@@ -130,7 +130,7 @@
               if ($_GET["vista"] == "inicio"||
                   $_GET["vista"] == "usuarios"||
                   $_GET["vista"] == "salir" ||
-                  $_GET["vista"] == "ModuloReportes")  {
+                  $_GET["vista"] == "reportes")  {
 
                 include 'vistas/modulos/'.$_GET["vista"].'.php';
 
