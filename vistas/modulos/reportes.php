@@ -348,7 +348,7 @@
 
   $tabla="temp_historico_dia";
 
-  $respuestaTemperatura= temperaturaControlador::ctrHistoricoTemperatura($tabla);
+  $respuestaTemperatura= reportesControlador::ctrHistoricoTemperatura($tabla);
   
   foreach($respuestaTemperatura as $key => $value){
     array_push($temperaturas, $value["Temp"]);
