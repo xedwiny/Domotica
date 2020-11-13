@@ -301,19 +301,33 @@
           CUERPO DEL MODAL
         =================================-->
         <div class="modal-body">
-          <div class="col-md-12">               
-            <div class="col-md-12">
+        
+          <!-- Grafico temp -->
+
+          <div class="col-md-8">
               <div class="card card-primary">
                 <div class="card-header" style="background:#343a40;">
-                  <h3 class="card-title">Temperatura</h3>
+                  <h3 class="card-title">Historial</h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>                      
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                  </div>
+                </div>
                 <div class="card-body">
+
                   <div class="chart-container" style="position: relative;">
                     <canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
-                  </div>  
+                  </div>
+                  
                 </div>
+                <!-- /.card-body -->
               </div>
-            </div>
           </div>
+
 
 
         <!--================================
@@ -323,6 +337,72 @@
           <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
           <button type="button" class="btn btn-primary" data-dismiss="modal">Ver grafica</button>
         </div>
+
+        <?php
+//---- Grafico----
+  $labelsTemp=array(); // label para hora
+
+  $temperaturas=array(); //datos de las temperaturas
+  $gases=array();        //datos de los gases
+  $humedades=array();    //dattos de las humedades
+
+  $tabla="temp_historico_dia";
+
+  $respuestaTemperatura= temperaturaControlador::ctrHistoricoTemperatura($tabla);
+  
+  foreach($respuestaTemperatura as $key => $value){
+    array_push($temperaturas, $value["Temp"]);
+    array_push($gases, $value["Gas"]);
+    array_push($humedades, $value["Hum"]);
+
+    $hora_temperatura=substr($value["Fecha"],11,5);
+
+    array_push($labelsTemp, $hora_temperatura);
+  }
+
+?>
+
+<script>
+//--------  Grafico de Temperatura --------------
+  var ctxT =$("#GrafTemp").get(0).getContext('2d');
+  var chart = new Chart(ctxT, {
+    type: 'line',
+    data: {
+      labels: [
+        <?php
+          foreach($labelsTemp as $value){
+            echo "'".$value."',";
+          }
+        ?>
+      ],          
+      datasets: [{
+        label: 'Temperatura en grados ºC',
+        backgroundColor: 'rgb(251, 154, 153)',
+        borderColor: 'rgb(255, 99, 132)',
+        data:[
+          <?php
+            foreach($temperaturas as $key => $value){
+              echo $value.",";
+            }
+          ?>
+        ]
+      }]
+    },
+
+    // Configuration options go here
+    options: {
+      responsive: true,
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItems, data){
+            return tooltipItems.yLabel + '°C';
+          }
+        }
+      }
+    }
+  });
+ 
+</script>
 
       </form>
     </div>
@@ -380,3 +460,5 @@
     </div>
   </div>        
 </div>
+
+
