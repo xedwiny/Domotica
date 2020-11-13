@@ -72,12 +72,12 @@
                      Registro de Accesos <span class="float-right badge bg-danger">842</span>
                   </a>
                 </li>
-
-                
-                  <button  type="button" href="#" class="bg-olive" data-toggle="modal" data-target="#Informacion">
-                    <img src="images/icons/flecha.png">
-                  </button>
-
+                <li class="nav-item bg-olive">
+                  <a href="#" class="nav-link"  style="color:#FFFFE0">
+                    Ver Grafica ventanas <span class="float-right badge bg-olive"><i class="nav-icon fas fa-check-double"></i></span>
+                    
+                  </a>
+                </li>
               </ul>
             </div>
           </div>  
@@ -118,12 +118,12 @@
                     Registro de Accesos <span class="float-right badge bg-danger">42</span>
                   </a>
                 </li>
-
-
-                 <button  type="button" href="#" class="bg-teal" data-toggle="modal" data-target="#Informacion">
-                  <img src="images/icons/flecha.png">
-                </button>
-
+                <li class="nav-item bg-teal">
+                  <a href="#" class="nav-link"  style="color:#FFFFE0">
+                    Ver Grafica ventanas <span class="float-right badge bg-teal"><i class="nav-icon fas fa-check-double"></i></span>
+                    
+                  </a>
+                </li>
               </ul>
             </div>
           </div>  
@@ -165,9 +165,12 @@
                   </a>
                 </li>
                 
-                <button type="button" href="#" class="bg-danger" data-toggle="modal" data-target="#Informacion">
-                  <img src="images/icons/flecha.png">
-                </button>
+                <li class="nav-item bg-danger">
+                  <a href="#" class="nav-link"  style="color:#FFFFE0">
+                    Ver Grafica Temperatura <span class="float-right badge bg-danger"><i class="nav-icon fas fa-check-double"></i></span>
+                    
+                  </a>
+                </li>
         
               </ul>
             </div>
@@ -209,11 +212,12 @@
                     Registro de Servicios  <span class="float-right badge bg-danger">842</span>
                   </a>
                 </li>
-
-                <button type="button" href="#" class="bg-primary" data-toggle="modal" data-target="#Informacion">
-                  <img src="images/icons/flecha.png">
-                </button>
-
+                <li class="nav-item bg-primary">
+                  <a href="#" class="nav-link"  style="color:#FFFFE0">
+                    Ver Grafica Servicios <span class="float-right badge bg-primary"><i class="nav-icon fas fa-check-double"></i></span>
+                    
+                  </a>
+                </li>
               </ul>
             </div>
           </div>  
@@ -255,9 +259,12 @@
                   </a>
                 </li>
 
-                <button type="button" href="#" class="bg-warning" data-toggle="modal" data-target="#Informacion">
-                  <img src="images/icons/flecha.png">
-                </button>
+                <li class="nav-item bg-warning">
+                  <a href="#" class="nav-link"  style="color:#FFFFE0">
+                    Ver Grafica Temperatura <span class="float-right badge bg-warning"><i class="nav-icon fas fa-check-double"></i></span>
+                    
+                  </a>
+                </li>
 
               </ul>
             </div>
@@ -275,7 +282,7 @@
   MODALES DE TEMPERATURA
 =================================-->
 <!--Mas Informacion-->
-<div class="modal" id="Informacion">
+<div class="modal fade" id="Informacion">
   <div class="modal-dialog">
     <div class="modal-content" style="background: #6c757d; color:#fff;">
       <form role="form" method="post" enctype="multipart/form-data">
