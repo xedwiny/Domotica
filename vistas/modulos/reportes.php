@@ -338,76 +338,6 @@
           <button type="button" class="btn btn-primary" data-dismiss="modal">Ver grafica</button>
         </div>
 
-        <?php
-//---- Grafico----
-  $labelsTemp=array(); // label para hora
-
-  $temperaturas=array(); //datos de las temperaturas
-  $gases=array();        //datos de los gases
-  $humedades=array();    //dattos de las humedades
-
-  $tabla="temp_historico_dia";
-
-  $respuestaTemperatura= reportesControlador::ctrHistoricoTemperatura($tabla);
-  
-  foreach($respuestaTemperatura as $key => $value){
-    array_push($temperaturas, $value["Temp"]);
-    array_push($gases, $value["Gas"]);
-    array_push($humedades, $value["Hum"]);
-
-    $hora_temperatura=substr($value["Fecha"],11,5);
-
-    array_push($labelsTemp, $hora_temperatura);
-  }
-
-?>
-
-<script>
-//--------  Grafico de Temperatura --------------
-  var ctxT =$("#GrafTemp").get(0).getContext('2d');
-  var chart = new Chart(ctxT, {
-    type: 'line',
-    data: {
-      labels: [
-        <?php
-          foreach($labelsTemp as $value){
-            echo "'".$value."',";
-          }
-        ?>
-      ],          
-      datasets: [{
-        label: 'Temperatura en grados ºC',
-        backgroundColor: 'rgb(251, 154, 153)',
-        borderColor: 'rgb(255, 99, 132)',
-        data:[
-          <?php
-            foreach($temperaturas as $key => $value){
-              echo $value.",";
-            }
-          ?>
-        ]
-      }]
-    },
-
-    // Configuration options go here
-    options: {
-      responsive: true,
-      tooltips: {
-        callbacks: {
-          label: function(tooltipItems, data){
-            return tooltipItems.yLabel + '°C';
-          }
-        }
-      }
-    }
-  });
- 
-</script>
-
-      </form>
-    </div>
-  </div>        
-</div>
 
 <!--================================
   MODALES DE TEMPERATURA
@@ -439,8 +369,8 @@
                   <h3 class="card-title">Temperatura</h3>
                 <div class="card-body">
                   <div class="chart-container" style="position: relative;">
-                  <!--<canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
-                  -->
+                  <canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
+                  
                   </div>  
                 </div>
               </div>
