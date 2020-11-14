@@ -283,8 +283,8 @@
 =================================-->
 <!--Mas Informacion-->
 <div class="modal fade" id="modalIlumi">
-  <div class="modal-dialog">
-    <div class="modal-content" style="background: #6c757d; color:#fff;">
+  <div class="modal-dialog ">
+    <div class="modal-content float:left;" style="background: #6c757d; color:#fff;">
       <form role="form" method="post" enctype="multipart/form-data">
 
         <!--================================
@@ -304,7 +304,7 @@
         
           <!-- Grafico temp -->
 
-          <div class="col-md-8">
+          <div class="col-md-12">
               <div class="card card-primary">
                 <div class="card-header" style="background:#343a40;">
                   <h3 class="card-title">Historial</h3>
@@ -335,8 +335,8 @@
           FOOTER DEL MODAL
          ================================-->
         <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Ver grafica</button>
+          <button type="button" class="col-sm-5 btn btn-primary" data-dismiss="modal">Aceptar</button>
+          <button type="button" class="col-sm-5 btn  btn-danger" data-dismiss="modal">Ver grafica</button>
         </div>
 
        <!--================================
