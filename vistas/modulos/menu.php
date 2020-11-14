@@ -197,13 +197,13 @@
 
           <li class="nav-item has-treeview">
 
-            <a href="ModuloReportes" class="nav-link">
+            <a href="reportes" class="nav-link">
 
              <i class="nav-icon fas fa-check-double"></i>
 
               <p>
 
-                Modulo Reportes
+                Reportes
 
               </p>
 

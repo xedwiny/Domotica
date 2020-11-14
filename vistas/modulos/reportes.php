@@ -279,7 +279,7 @@
 
   
 <!--================================
-  MODALES DE Iluminacion
+  MODALES 
 =================================-->
 <!--Mas Informacion-->
 <div class="modal fade" id="modalIlumi">
@@ -291,7 +291,7 @@
           CABEZA DEL MODAL
         =================================-->
         <div class="modal-header"  style="background: #343a40; color: #fff">
-          <h4 class="modal-title">Informacion</h4>
+          <h4 class="modal-title">Informaciiiiiion</h4>
           <button type="button" style="color:red;" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -320,8 +320,9 @@
                 <div class="card-body">
 
                   <div class="chart-container" style="position: relative;">
-                    <canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
+                  <canvas id="myChart" width="400" height="400"></canvas>
                   </div>
+                  
                   
                 </div>
                 <!-- /.card-body -->
@@ -338,57 +339,51 @@
           <button type="button" class="btn btn-primary" data-dismiss="modal">Ver grafica</button>
         </div>
 
-
-<!--================================
-  MODALES DE TEMPERATURA
-=================================-->
-<!--Mas Informacion-->
-<div class="modal fade" id="modaltempe">
-  <div class="modal-dialog">
-    <div class="modal-content" style="background: #6c757d; color:#fff;">
-      <form role="form" method="post" enctype="multipart/form-data">
-
-        <!--================================
-          CABEZA DEL MODAL
-        =================================-->
-        <div class="modal-header"  style="background: #343a40; color: #fff">
-          <h4 class="modal-title">Informacion</h4>
-          <button type="button" style="color:red;" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <!--================================
-          CUERPO DEL MODAL
-        =================================-->
-        <div class="modal-body">
-          <div class="col-md-12">               
-            <div class="col-md-12">
-              <div class="card card-primary">
-                <div class="card-header" style="background:#343a40;">
-                  <h3 class="card-title">Temperatura</h3>
-                <div class="card-body">
-                  <div class="chart-container" style="position: relative;">
-                  <canvas id="GrafTemp" class="chartjs-render-monitor"></canvas>
-                  
-                  </div>  
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        <!--================================
-          FOOTER DEL MODAL
+       <!--================================
+          grafica de Reporte por dias
          ================================-->
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Ver grafica</button>
-        </div>
 
-      </form>
-    </div>
-  </div>        
-</div>
+        <script>
+          var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+              ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+             }]
+            },
+            options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+           }
+             }
+            });
+        </script>
+
+
+
 
 
